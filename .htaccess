@@ -1,0 +1,16 @@
+RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Quitar la extensión .php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php
+
+    RewriteRule ^categorias/([a-zA-Z0-9-]+) categorias.php?title=$1
+    RewriteRule ^publicaciones/([a-zA-Z0-9-]+) publicaciones.php?title=$1
+
+    ErrorDocument 404 http://localhost/usuario/404.php
