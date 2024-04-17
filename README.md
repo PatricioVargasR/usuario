@@ -22,7 +22,7 @@ en la ruta *usuario/mvc/views/includes/* puesto a que este archivo se encarga de
 <?php
 
     function base_url($slug){
-        // Línea a modificar, puedes cambiar después cambiar el nombre de "dash" acorde al nombre de tu carpeta
+        // Línea a modificar, puedes cambiar después cambiar el nombre de "usuario" acorde al nombre de tu carpeta
         echo 'http://localhost/usuario/'.$slug;
     }
 ?>
